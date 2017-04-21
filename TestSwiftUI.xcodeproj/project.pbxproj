@@ -14,6 +14,9 @@
 		CE876C2C1EA87F4300425486 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE876C2A1EA87F4300425486 /* LaunchScreen.storyboard */; };
 		CE876C371EA87F4300425486 /* TestSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE876C361EA87F4300425486 /* TestSwiftUITests.swift */; };
 		CE876C421EA87F4300425486 /* TestSwiftUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE876C411EA87F4300425486 /* TestSwiftUIUITests.swift */; };
+		CE876C511EA8802500425486 /* CJHomeViewBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE876C501EA8802500425486 /* CJHomeViewBtn.swift */; };
+		CE876C531EA887CF00425486 /* 交易详情.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE876C521EA887CF00425486 /* 交易详情.jpg */; };
+		CE876C591EA8B63900425486 /* CJFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE876C581EA8B63900425486 /* CJFirstViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		CE876C3D1EA87F4300425486 /* TestSwiftUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestSwiftUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE876C411EA87F4300425486 /* TestSwiftUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSwiftUIUITests.swift; sourceTree = "<group>"; };
 		CE876C431EA87F4300425486 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE876C501EA8802500425486 /* CJHomeViewBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CJHomeViewBtn.swift; sourceTree = "<group>"; };
+		CE876C521EA887CF00425486 /* 交易详情.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "交易详情.jpg"; sourceTree = "<group>"; };
+		CE876C581EA8B63900425486 /* CJFirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CJFirstViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +83,11 @@
 		CE876C151EA87F4300425486 = {
 			isa = PBXGroup;
 			children = (
+				CE876C571EA8B62300425486 /* CJFourth */,
+				CE876C561EA8B61900425486 /* CJThird */,
+				CE876C551EA8B61100425486 /* CJSecond */,
+				CE876C541EA8B60700425486 /* CJFirst */,
+				CE876C4F1EA8800D00425486 /* CJView */,
 				CE876C201EA87F4300425486 /* TestSwiftUI */,
 				CE876C351EA87F4300425486 /* TestSwiftUITests */,
 				CE876C401EA87F4300425486 /* TestSwiftUIUITests */,
@@ -123,6 +134,44 @@
 				CE876C431EA87F4300425486 /* Info.plist */,
 			);
 			path = TestSwiftUIUITests;
+			sourceTree = "<group>";
+		};
+		CE876C4F1EA8800D00425486 /* CJView */ = {
+			isa = PBXGroup;
+			children = (
+				CE876C521EA887CF00425486 /* 交易详情.jpg */,
+				CE876C501EA8802500425486 /* CJHomeViewBtn.swift */,
+			);
+			path = CJView;
+			sourceTree = "<group>";
+		};
+		CE876C541EA8B60700425486 /* CJFirst */ = {
+			isa = PBXGroup;
+			children = (
+				CE876C581EA8B63900425486 /* CJFirstViewController.swift */,
+			);
+			path = CJFirst;
+			sourceTree = "<group>";
+		};
+		CE876C551EA8B61100425486 /* CJSecond */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CJSecond;
+			sourceTree = "<group>";
+		};
+		CE876C561EA8B61900425486 /* CJThird */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CJThird;
+			sourceTree = "<group>";
+		};
+		CE876C571EA8B62300425486 /* CJFourth */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CJFourth;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +282,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE876C2C1EA87F4300425486 /* LaunchScreen.storyboard in Resources */,
+				CE876C531EA887CF00425486 /* 交易详情.jpg in Resources */,
 				CE876C291EA87F4300425486 /* Assets.xcassets in Resources */,
 				CE876C271EA87F4300425486 /* Main.storyboard in Resources */,
 			);
@@ -261,6 +311,8 @@
 			files = (
 				CE876C241EA87F4300425486 /* ViewController.swift in Sources */,
 				CE876C221EA87F4300425486 /* AppDelegate.swift in Sources */,
+				CE876C591EA8B63900425486 /* CJFirstViewController.swift in Sources */,
+				CE876C511EA8802500425486 /* CJHomeViewBtn.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,6 +466,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = TestSwiftUI/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.AnnieHou.TestSwiftUI;
@@ -426,6 +479,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = TestSwiftUI/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.AnnieHou.TestSwiftUI;
