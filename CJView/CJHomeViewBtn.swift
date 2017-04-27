@@ -8,28 +8,30 @@
 
 import UIKit
 protocol CJHomeViewBtnDelegate:NSObjectProtocol {
-    func homeBtnClicked()
+    func homeBtnClicked(tag:NSInteger)
 }
 class CJHomeViewBtn: UIView {
     
     weak var delegate:CJHomeViewBtnDelegate?
     
-    var firstBtn = UIButton(frame: CGRect(x: 0, y: 0, width: WIDTH - 80, height: 100))
+    var btn = UIButton(frame: CGRect(x: 0, y: 0, width: WIDTH - 80, height: 100))
     
     override init(frame: CGRect) {
         super .init(frame: frame)
-        firstBtn.backgroundColor = UIColor.red
-        firstBtn.setTitle("交电费", for: .normal)
-        firstBtn.addTarget(self, action: #selector(firstBtnClicked), for: .touchUpInside)
-        self.addSubview(firstBtn)
+        btn.backgroundColor = COLOR_RED_V2()
+        btn.setTitle("交电费", for: .normal)
+        btn.addTarget(self, action: #selector(firstBtnClicked(btn:)), for: .touchUpInside)
+        btn.layer.masksToBounds = true
+        btn.layer.cornerRadius = 10.0
+        self.addSubview(btn)
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func firstBtnClicked() -> Void {
-        self.delegate?.homeBtnClicked()
+    func firstBtnClicked(btn:UIButton) -> Void {
+        self.delegate?.homeBtnClicked(tag: btn.tag)
     }
 
 }

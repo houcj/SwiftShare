@@ -17,6 +17,9 @@
 		CE876C511EA8802500425486 /* CJHomeViewBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE876C501EA8802500425486 /* CJHomeViewBtn.swift */; };
 		CE876C531EA887CF00425486 /* 交易详情.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE876C521EA887CF00425486 /* 交易详情.jpg */; };
 		CE876C591EA8B63900425486 /* CJFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE876C581EA8B63900425486 /* CJFirstViewController.swift */; };
+		CEC0E1091EB05344003C8294 /* BaseFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC0E1081EB05344003C8294 /* BaseFunc.swift */; };
+		CEC0E10C1EB06D0A003C8294 /* CJCustomNav.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC0E10B1EB06D0A003C8294 /* CJCustomNav.swift */; };
+		CEC0E10E1EB0A71D003C8294 /* CJSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC0E10D1EB0A71D003C8294 /* CJSecondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,9 @@
 		CE876C501EA8802500425486 /* CJHomeViewBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CJHomeViewBtn.swift; sourceTree = "<group>"; };
 		CE876C521EA887CF00425486 /* 交易详情.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "交易详情.jpg"; sourceTree = "<group>"; };
 		CE876C581EA8B63900425486 /* CJFirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CJFirstViewController.swift; sourceTree = "<group>"; };
+		CEC0E1081EB05344003C8294 /* BaseFunc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseFunc.swift; sourceTree = "<group>"; };
+		CEC0E10B1EB06D0A003C8294 /* CJCustomNav.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CJCustomNav.swift; sourceTree = "<group>"; };
+		CEC0E10D1EB0A71D003C8294 /* CJSecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CJSecondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +89,8 @@
 		CE876C151EA87F4300425486 = {
 			isa = PBXGroup;
 			children = (
+				CEC0E10A1EB06CE6003C8294 /* CJCustomNav */,
+				CEC0E1071EB0531F003C8294 /* CJTool */,
 				CE876C571EA8B62300425486 /* CJFourth */,
 				CE876C561EA8B61900425486 /* CJThird */,
 				CE876C551EA8B61100425486 /* CJSecond */,
@@ -156,6 +164,7 @@
 		CE876C551EA8B61100425486 /* CJSecond */ = {
 			isa = PBXGroup;
 			children = (
+				CEC0E10D1EB0A71D003C8294 /* CJSecondViewController.swift */,
 			);
 			path = CJSecond;
 			sourceTree = "<group>";
@@ -172,6 +181,22 @@
 			children = (
 			);
 			path = CJFourth;
+			sourceTree = "<group>";
+		};
+		CEC0E1071EB0531F003C8294 /* CJTool */ = {
+			isa = PBXGroup;
+			children = (
+				CEC0E1081EB05344003C8294 /* BaseFunc.swift */,
+			);
+			path = CJTool;
+			sourceTree = "<group>";
+		};
+		CEC0E10A1EB06CE6003C8294 /* CJCustomNav */ = {
+			isa = PBXGroup;
+			children = (
+				CEC0E10B1EB06D0A003C8294 /* CJCustomNav.swift */,
+			);
+			path = CJCustomNav;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,7 +337,10 @@
 				CE876C241EA87F4300425486 /* ViewController.swift in Sources */,
 				CE876C221EA87F4300425486 /* AppDelegate.swift in Sources */,
 				CE876C591EA8B63900425486 /* CJFirstViewController.swift in Sources */,
+				CEC0E1091EB05344003C8294 /* BaseFunc.swift in Sources */,
 				CE876C511EA8802500425486 /* CJHomeViewBtn.swift in Sources */,
+				CEC0E10C1EB06D0A003C8294 /* CJCustomNav.swift in Sources */,
+				CEC0E10E1EB0A71D003C8294 /* CJSecondViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -561,6 +589,7 @@
 				CE876C481EA87F4300425486 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CE876C491EA87F4300425486 /* Build configuration list for PBXNativeTarget "TestSwiftUITests" */ = {
 			isa = XCConfigurationList;
@@ -569,6 +598,7 @@
 				CE876C4B1EA87F4300425486 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CE876C4C1EA87F4300425486 /* Build configuration list for PBXNativeTarget "TestSwiftUIUITests" */ = {
 			isa = XCConfigurationList;
@@ -577,6 +607,7 @@
 				CE876C4E1EA87F4300425486 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
