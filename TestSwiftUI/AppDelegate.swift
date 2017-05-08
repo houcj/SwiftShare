@@ -15,6 +15,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
+        UMSocialManager.default().openLog(true)
+        UMSocialGlobal.shareInstance().isClearCacheWhenGetUserInfo = false
+        UMSocialManager.default().umSocialAppkey = "5861e5daf5ade41326001eab"
+//        UMSocialManager.default().setPlaform(UMSocialPlatformType.wechatSession, appKey: "wxdc1e388c3822c80b", appSecret: "3baf1193c85774b3fd9d18447d76cab0", redirectURL: "http://mobile.umeng.com/social")
+//        UMSocialManager.default().setPlaform(UMSocialPlatformType.QQ, appKey: "1105821097", appSecret: nil, redirectURL: "http://mobile.umeng.com/social")
+        UMSocialManager.default().setPlaform(UMSocialPlatformType.wechatFavorite, appKey: "wxdc1e388c3822c80b", appSecret: "3baf1193c85774b3fd9d18447d76cab0", redirectURL: "http://mobile.umeng.com/social")
+        UMSocialManager.default().setPlaform(UMSocialPlatformType.QQ, appKey: "1105821097", appSecret: nil, redirectURL: "http://mobile.umeng.com/social")
+        
         let vc = ViewController()
         let nav = UINavigationController(rootViewController: vc)
         nav.setNavigationBarHidden(true, animated: true)
@@ -25,8 +33,67 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         
+        
+        
+        
         return true
     }
+    
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        let result = UMSocialManager.default().handleOpen(url, options: options)
+        if !result {
+            // 其他如支付等SDK的回调
+        }
+        return result
+    }
+    
+    
+    
+    
+//    #if __IPHONE_OS_VERSION_MAX_ALLOWED > 100000
+//    - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey, id> *)options
+//    {
+//    //6.3的新的API调用，是为了兼容国外平台(例如:新版facebookSDK,VK等)的调用[如果用6.2的api调用会没有回调],对国内平台没有影响。
+//    BOOL result = [[UMSocialManager defaultManager]  handleOpenURL:url options:options];
+//    if (!result) {
+//    // 其他如支付等SDK的回调
+//    }
+//    return result;
+//    }
+//    
+//    #endif
+//    
+//    - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+//    {
+//    //6.3的新的API调用，是为了兼容国外平台(例如:新版facebookSDK,VK等)的调用[如果用6.2的api调用会没有回调],对国内平台没有影响
+//    BOOL result = [[UMSocialManager defaultManager] handleOpenURL:url sourceApplication:sourceApplication annotation:annotation];
+//    if (!result) {
+//    // 其他如支付等SDK的回调
+//    }
+//    return result;
+//    }
+//    
+//    - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
+//    {
+//    BOOL result = [[UMSocialManager defaultManager] handleOpenURL:url];
+//    if (!result) {
+//    // 其他如支付等SDK的回调
+//    }
+//    return result;
+//    }
+//    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

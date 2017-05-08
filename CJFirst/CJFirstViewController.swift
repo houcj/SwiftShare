@@ -73,6 +73,8 @@ class CJFirstViewController: UIViewController,CustomNavDelegate {
         self.navigationController?.navigationBar.isHidden = true
         self.view.backgroundColor = COLOR_GREY_V2()
         
+        
+        
         self.view.addSubview(self.nav)
         
         self.view0.addSubview(self.label0)
@@ -90,16 +92,57 @@ class CJFirstViewController: UIViewController,CustomNavDelegate {
     }
 
     func bottomBtnClicked(btn:UIButton) -> Void {
+        //创建分享消息对象
+        
+        UMSocialSwiftInterface.setPreDefinePlatforms([
+            (UMSocialPlatformType.wechatSession.rawValue),
+            (UMSocialPlatformType.wechatTimeLine.rawValue),
+            (UMSocialPlatformType.QQ.rawValue),
+            (UMSocialPlatformType.qzone.rawValue)
+            ])
+        
+        UMSocialUIManager.removeAllCustomPlatformWithoutFilted()
+        UMSocialShareUIConfig.shareInstance().sharePageGroupViewConfig.sharePageGroupViewPostionType = UMSocialSharePageGroupViewPositionType.middle
+        UMSocialShareUIConfig.shareInstance().sharePageScrollViewConfig.shareScrollViewPageItemStyleType = UMSocialPlatformItemViewBackgroudType.none
+        
+        UMSocialSwiftInterface.showShareMenuViewInWindowWithPlatformSelectionBlock { (platformType, userInfo) in
+            self.runShareWithType(type: platformType)
+        }
+    }
+
+
+    func runShareWithType(type:UMSocialPlatformType) -> Void {
+        print("runShareWithType-----\(type)")
+        
+        let messageObject = UMSocialMessageObject.init()
+        messageObject.text = "终于搞定了，😄\n欢迎使用【友盟+】社会化组件U-Share，SDK包最小，集成成本最低，助力您的产品开发、运营与推广！"
+        UMSocialSwiftInterface.share(plattype: type, messageObject: messageObject, viewController: self) { (data, error) in
+            if (error != nil) {
+                
+            }else{
+                
+            }
+        }
+        
+        
         
     }
+
+
     
+    
+    
+    
+    
+    
+
     func leftBtnClicked() -> Void {
         self.navigationController?.popViewController(animated: true)
     }
     func rightBtnClicked() -> Void {
         print("rightBtnClicked")
     }
-    
+
     /*
     // MARK: - Navigation
 
@@ -111,3 +154,5 @@ class CJFirstViewController: UIViewController,CustomNavDelegate {
     */
 
 }
+
+

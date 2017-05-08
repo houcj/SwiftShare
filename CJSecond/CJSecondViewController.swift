@@ -50,9 +50,18 @@ class CJSecondViewController: UIViewController , UITableViewDelegate, UITableVie
         return 80
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell.init(style: UITableViewCellStyle.default, reuseIdentifier: "cell")
-        cell.textLabel?.text = "9:45"
-        return cell
+        
+        var cell = tableView.dequeueReusableCell(withIdentifier: "cell")
+        
+        if (cell == nil) {
+            cell = CJTableViewCell.init(style: UITableViewCellStyle.default, reuseIdentifier: "cell")
+        }
+        
+        
+        
+        
+//        cell.textLabel?.text = "9:45"
+        return cell!
     }
     
     // MARK: - NavDelegate

@@ -2,8 +2,10 @@ platform:ios,’8.0’
 
 use_frameworks!
 
-target ‘PulldownMenu’ do
+target ‘TestSwiftUI’ do
 
-
+pod ‘UMengUShare/UI’
+pod ‘UMengUShare/Social/ReducedWeChat'
+pod ‘UMengUShare/Social/ReducedQQ'
 
 end

@@ -21,6 +21,12 @@ func backBtn(img:UIImage) -> UIButton {
     return btn
 }
 
+func bottomView(height:CGFloat) -> UIView{
+    let bottomView = UIView(frame: CGRect(x: CGFloat(0), y: height - 1, width: WIDTH, height: CGFloat(1)))
+    bottomView.backgroundColor = COLOR_GREY_V2()
+    return bottomView
+}
+
 class BaseFunc: NSObject {
     weak var delegate:backBtnClickedDelegate?
 }
