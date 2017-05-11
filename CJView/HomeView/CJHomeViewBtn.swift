@@ -19,7 +19,7 @@ class CJHomeViewBtn: UIView {
     override init(frame: CGRect) {
         super .init(frame: frame)
         btn.backgroundColor = COLOR_RED_V2()
-        btn.setTitle("交电费", for: .normal)
+        btn.setTitle("弹出分享面板", for: .normal)
         btn.addTarget(self, action: #selector(firstBtnClicked(btn:)), for: .touchUpInside)
         btn.layer.masksToBounds = true
         btn.layer.cornerRadius = 10.0
